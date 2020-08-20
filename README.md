@@ -52,4 +52,5 @@
    - 7.2.5 Switch back to the master branch: `git checkout master`
    - 7.2.6 Merge changes into master: `git merge events-branch` and fix any conflicts if any.
    - 7.2.7 Push changes to GitHub: `git push origin master`
+   - 7.2.8 You can now remove the branch: `git branch -d events-branch`
 8. It will take about 10 minutes for the changes to show up on the website.
