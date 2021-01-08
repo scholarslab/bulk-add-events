@@ -3,7 +3,7 @@
 1. Create a spreadsheet with the first row containing the following columns in
    this order (and including the colon):
 
-   ``` author: start_date: end_date: start_time: end_time: layout: location: slug: title: content: ```
+   `author: start_date: end_date: start_time: end_time: layout: location: slug: title: content:`
 
 
 2. Fill in all the details for your events. Each event should have its own row.
@@ -24,7 +24,7 @@
     title = "Coding Minecraft on the Raspberry Pi"
     ```
 3. Create the events in the Library's public events calendar in LibCal. If
-   registration is required, copy the registration link and paste it back in to
+   registration is required, copy the registration link and paste it back into
    the content field in the spreadsheet.
 4. Save the spreadsheet as a CSV file to your computer.
     - If saving from Microsoft Excell, make sure the file is in UTF-8 format
@@ -34,7 +34,7 @@
     - To convert to just UTF-8, run a command like `dos2unix` like so:
       `dos2unix workshops.csv`
 5. Create an empty folder on your computer named `events`.
-6. Download the `generate-events.py` script and put it in the same folder as the `events` folder. They should be on the same level. From the command line like so: `python generate-events.py workshops.csv`
+6. Download the `generate-events.py` script and put it in the same folder as the `events` folder. They should be on the same level. Execute the script from the command line like so: `python generate-events.py workshops.csv`
 7. Add the files to the repo via web browser:
 - 7.1 For browser based updating
    - 7.1.1 Log in to [Github.com](https://github.com) and go to this repo page: [https://github.com/scholarslab/scholarslab.org/tree/master/collections/_events ](https://github.com/scholarslab/scholarslab.org/tree/master/collections/_events). Click the `Add file` button and Upload files.
