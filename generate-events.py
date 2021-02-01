@@ -1,10 +1,15 @@
 import sys
 import csv
 
+IMAGE_FOLDER = 'workshops'
+
 CSVFILE = sys.argv[1]
 
 FILENAME_COL = 7
+TITLE_COL = 8
 CONTENT_COL = 9
+IMAGE_COL = 10
+REGISTER_COL = 11
 
 with open(CSVFILE) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -25,7 +30,13 @@ with open(CSVFILE) as csv_file:
                     fp.write(f'{header[f]} {row[f]}\n')
             fp.write('---\n')
             fp.write('\n')
+            if row[IMAGE_COL]:
+                fp.write(f'![{row[TITLE_COL]}](/assets/post-media/{IMAGE_FOLDER}/{row[IMAGE_COL]})\n')
+                fp.write('\n')
             fp.write(f'{row[CONTENT_COL]}\n')
+            if row[REGISTER_COL]:
+                fp.write('\n')
+                fp.write(f'Register here: [{row[REGISTER_COL]} ]({row[REGISTER_COL]})\n')
             fp.close()
 
         line_count += 1
