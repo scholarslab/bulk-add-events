@@ -1,10 +1,12 @@
 import sys
 import csv
+import string
 
 IMAGE_FOLDER = 'workshops'
 
 CSVFILE = sys.argv[1]
 
+AUTHOR = 0
 FILENAME_COL = 7
 TITLE_COL = 8
 CONTENT_COL = 9
@@ -22,6 +24,10 @@ with open(CSVFILE) as csv_file:
             fp = open(f'events/{row[FILENAME_COL]}.md', 'w')
             fp.write('---\n')
             for f in range(9):
+                if f == 0:
+                    INSTRUCTOR = string.capwords(row[f].replace('-', ' '))
+                    fp.write(f'instructor: {INSTRUCTOR}\n')
+
                 # if its the start or end time, the location or title, wrap in
                 # quotes (columns start at 0)
                 if f == 3 or f == 4 or f == 6 or f == 8: 
