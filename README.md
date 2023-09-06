@@ -103,7 +103,7 @@
    - 7.2.5 Add the new files to the branch: `git add collections/_events` and
      `git add assets/post-media/`, and then commit them: `git commit -m "Adding new events"`
    - 7.2.6 Test your changes. Run `bundle exec jekyll serve` and test in the
-     browser.
+     browser. You may need to delete everything in the `_site` folder first.
    - 7.2.6 Switch back to the master branch: `git checkout master`
    - 7.2.7 Merge changes into master: `git merge events-branch` and fix conflicts if any.
    - 7.2.8 Push changes to GitHub: `git push origin master`
