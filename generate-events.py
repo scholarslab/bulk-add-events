@@ -42,7 +42,14 @@ with open(CSVFILE) as csv_file:
             fp.write(f'{row[CONTENT_COL]}\n')
             if row[REGISTER_COL]:
                 fp.write('\n')
-                fp.write(f'Register here: [{row[REGISTER_COL]} ]({row[REGISTER_COL]})\n')
+                fp.write('Register here:')
+                fp.write('\n')
+                reg_link = row[REGISTER_COL].splitlines()
+                for link in reg_link:
+                    link = link.strip()
+                    fp.write('\n')
+                    fp.write(f'[{link} ]({link})')
+                    fp.write('\n')
             fp.close()
 
         line_count += 1
