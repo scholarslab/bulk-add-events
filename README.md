@@ -18,7 +18,12 @@
    column text, so, for example, do not include the text `author = ` just the
    text `ammon-shepherd`). The image cell should have the name of an image
    file (ex. funny-picture.jpg). You will add the image file to the right
-   folder in a later step.
+   folder in a later step. The content can be any text, in multiple lines, and
+   include hyperlinks. The registration field can contain a single link,
+   multiple links each on a separate line, or multiple links with the day of
+   the week preceding the link each on a separate line. A comma must come after
+   the day of the week.
+
 
     ```
     author =  ammon-shepherd
@@ -26,10 +31,19 @@
     end_date = 2019-10-21
     start_time = 12:00:00
     end_time = 13:00:00
+    layout = makerspace 
+        or 
     layout = events
-    location = "Clemons 320"
+    location = Alderman Library 308i
     slug = workshop-2019-10-21-coding-minecraft-on-raspberry-pi
-    title = "Coding Minecraft on the Raspberry Pi"
+    title = Coding Minecraft on the Raspberry Pi
+    content = This can be any text including hyperlinks
+    image = funny-picture.jpg
+    registration = Day of Week 1, https://link-to-registra.tion
+                   Day of Week 2, https://link-to-registra.tion
+                   Day of Week 3, https://link-to-registra.tion
+    if there is only one registration link
+    registration = https://link-to-registra.tion
     ```
 3. Create the events in the Library's public events calendar in LibCal. If
    registration is required, copy the registration link and paste it back into

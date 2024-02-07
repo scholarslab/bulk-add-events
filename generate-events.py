@@ -48,7 +48,11 @@ with open(CSVFILE) as csv_file:
                 for link in reg_link:
                     link = link.strip()
                     fp.write('\n')
-                    fp.write(f'[{link} ]({link})')
+                    if "," in link:
+                        day,url = link.split(',')
+                        fp.write(f'{day}: [{url} ]({url})')
+                    else:
+                        fp.write(f'[{link} ]({link})')
                     fp.write('\n')
             fp.close()
 
